@@ -1,0 +1,18 @@
+{
+  "name": "greeting-app",
+  "version": "0.0.1",
+  "authors": [
+    "elf Pavlik <perpetual-tripper@wwelves.org>"
+  ],
+  "description": "simple web app that greets you",
+  "main": "app.js",
+  "keywords": [
+    "web",
+    "app"
+  ],
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "superagent": "~0.18.0"
+  }
+}
