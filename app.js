@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", (function(){
 
   var agent = {};
 
+  function renderProfile(profile){
+    document.querySelector('#avatar').src = profile.image;
+    document.querySelector('#name').innerHTML = profile.name;
+  }
+
   var login = function(assertion){
     superagent.post(API_URL + '/auth/login')
     .withCredentials()
@@ -12,6 +17,7 @@ document.addEventListener("DOMContentLoaded", (function(){
         var data = response.body;
         console.log('Persona.onlogin()', data);
         agent.persona = data;
+        renderProfile(data.profile);
       } else {
         // FIXME handle case of 403 etc.
       }
